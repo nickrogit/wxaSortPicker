@@ -1,8 +1,5 @@
-###wxaSortPicker
-wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍等选择。
 
-
-### wxaSortPicker信息
+### wxaSortPicker
 
 * 版本号`1.0.0`
 * github地址: [https://github.com/nickrogit/wxaSortPicker](https://github.com/nickrogit/wxaSortPicker)
@@ -11,9 +8,9 @@ wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍
 
 ### 功能
 
- + 字符串数组首字母排序
- + 右侧点击abc跳转
- + 点击item返回数据
+* 字符串数组首字母排序
+* 右侧点击字母跳转
+* 点击item返回数据
 
 ### 开发要点
 
@@ -22,7 +19,7 @@ wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍
 * scroll-into-view（值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素），
 
 
-### 适用于
+### 适用场景
 
  * 城市、国籍、通讯录等字母排序
  
