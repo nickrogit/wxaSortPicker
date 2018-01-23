@@ -1,3 +1,5 @@
+//author:nickro
+//github:https://github.com/nickrogit/wxaSortPicker
 //函数参考http://wuxiangqian.iteye.com/blog/1426339
 // 改动为判定输入数组,产出排名
 // 汉字拼音首字母列表 本列表包含了20902个汉字,用于配合 ToChineseSpell  

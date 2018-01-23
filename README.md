@@ -7,7 +7,7 @@ wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍
 * 版本号`1.0.0`
 * github地址: [https://github.com/nickrogit/wxaSortPicker](https://github.com/nickrogit/wxaSortPicker)
 * 说明：微信小程序首字母排序选择表
-* 开发原理：scroll-view组件的scroll-into-view属性（值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素）
+* 扩展：现在数据是汉字数组，取值也是汉字，后面版本可加入数组json，如：[{name:'中国',value:'China'},{name:'美国',value:'America'}]
 
 ### 功能
 
