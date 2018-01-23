@@ -1,0 +1,5 @@
+<!--index.wxml-->
+
+<import src="../../utils/wxaSortPicker/wxaSortPicker.wxml"/> 
+
+<template is="wxaSortPicker" data="{{wxaSortPickerData}}"/>

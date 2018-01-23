@@ -1,0 +1,2 @@
+/**index.wxss**/
+@import "../../utils/wxaSortPicker/wxaSortPicker.wxss";
