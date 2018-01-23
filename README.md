@@ -17,7 +17,9 @@ wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍
 
 ### 开发要点
 
-* 微信小程序首字母排序选择表
+* 解析汉字Unicode编码并排序
+* 小程序scroll-view组件的scroll-into-view属性，点击右侧字母改变scroll-into-view的属性值，定位。
+* scroll-into-view（值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素），
 
 
 ### 适用于
