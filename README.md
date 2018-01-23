@@ -32,6 +32,7 @@
 
 
 ![预览gif](imgs/demo.gif)
+![预览2gif](imgs/demo2.gif)
 
 
 ## 使用方式
