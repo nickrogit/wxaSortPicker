@@ -32,14 +32,11 @@ wxaSortPicker-微信小程序首字母排序选择表，适用于城市、国籍
 
 ## 使用方式
 
-* 1.引入相关文件
-
-* 2.初始化
+* 引入相关文件并初始化，详情参看pages/index/index
 
 ```
-var wxaSortPicker = require('../../wxaSortPicker/wxaSortPicker.js');
+var wxaSortPicker = require('../../utils/wxaSortPicker/wxaSortPicker.js');
 onLoad: function () {
-    console.log('onLoad')
     var that = this
     //初始化
     wxaSortPicker.init([
@@ -47,9 +44,9 @@ onLoad: function () {
 		], that);
   },
 
-  //处理🉑接受点击返回的文字
+  //选中返回值
   wxaSortPickerItemTap: function(e){
     console.log(e.target.dataset.text);
   }
 ```
-* 3.详情参看pages/index/index
+
