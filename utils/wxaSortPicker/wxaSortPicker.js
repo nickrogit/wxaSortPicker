@@ -79,20 +79,28 @@ function query(text) {
 }
 
 function init(array, that, callback) {
-    var temData = that.data.wxaSortPickerData;
-    if(typeof temData == 'undefined'){
-        temData = {};
-    }
-    that.wxaSortPickerUpper = wxaSortPickerUpper;
-    that.wxaSortPickerLower = wxaSortPickerLower;
-    that.wxaSortPickerScroll = wxaSortPickerScroll;
-    that.wxaSortPickerTemTagTap = wxaSortPickerTemTagTap;
-    setViewWH(that);
+  if (array.length <= 0){
+    return false;
+  }
+  var temData = that.data.wxaSortPickerData;
+  if(typeof temData == 'undefined'){
+      temData = {};
+  }
+  that.wxaSortPickerUpper = wxaSortPickerUpper;
+  that.wxaSortPickerLower = wxaSortPickerLower;
+  that.wxaSortPickerScroll = wxaSortPickerScroll;
+  that.wxaSortPickerTemTagTap = wxaSortPickerTemTagTap;
+  setViewWH(that);
 
-    buildTextData(that,array);
+  buildTextData(that,array);
 }
 
 function buildTextData(that,arr){
+  if (typeof arr[0] === 'object'){
+    that.setData({
+      dataType: 'object'
+    })
+  }
     var textData = [{ tag: "A", textArray: [] }, 
                { tag: "B", textArray: [] }, 
                { tag: "C", textArray: [] }, 
@@ -122,14 +130,24 @@ function buildTextData(that,arr){
                { tag: "#", textArray: [] }];
     
     var temABC = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '#'];
-      
-    for (var i = 0; i < arr.length; i++ ){
+    if (that.data.dataType=='object'){
+      for (var i = 0; i < arr.length; i++) {
+        var text = arr[i];
+        var firstChar = text.name.substr(0, 1);
+        var reg = query(firstChar)[0];
+        var temIndex = temABC.indexOf(reg);
+        textData[temIndex].textArray.push(text);
+      }
+    }else{
+      for (var i = 0; i < arr.length; i++) {
         var text = arr[i];
         var firstChar = text.substr(0, 1);
         var reg = query(firstChar)[0];
         var temIndex = temABC.indexOf(reg);
         textData[temIndex].textArray.push(text);
+      }
     }
+    
     var temData = that.data.wxaSortPickerData;
     if(typeof temData == 'undefined'){
             temData = {};
@@ -138,6 +156,7 @@ function buildTextData(that,arr){
     that.setData({
         wxaSortPickerData: temData
     })
+    //console.log(that.data.wxaSortPickerData)
 }
 
 function wxaSortPickerUpper(e) {
@@ -149,7 +168,7 @@ function wxaSortPickerLower(e) {
 }
 
 function wxaSortPickerScroll(e) {
-    console.log(e.detail.scrollTop);
+    //console.log(e.detail.scrollTop);
 }
 
 function setViewWH(that) {

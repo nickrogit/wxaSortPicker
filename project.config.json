@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "touristappid",
-	"projectname": "wxaSortPicker",
+	"projectname": "wxaSortPicker2",
 	"condition": {
 		"search": {
 			"current": -1,
