@@ -134,8 +134,12 @@ function buildTextData(that,arr){
       for (var i = 0; i < arr.length; i++) {
         var text = arr[i];
         var firstChar = text.name.substr(0, 1);
+		firstChar = firstChar.toUpperCase();
         var reg = query(firstChar)[0];
         var temIndex = temABC.indexOf(reg);
+		if (temIndex == -1){
+			temIndex = 26;
+		}
         textData[temIndex].textArray.push(text);
       }
     }else{
