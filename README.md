@@ -1,5 +1,5 @@
 
-### wxaSortPicker
+### 小程序首字母排序选择器wxaSortPicker
 
 * 版本号`1.0.1`
 * github地址: [https://github.com/nickrogit/wxaSortPicker](https://github.com/nickrogit/wxaSortPicker)
